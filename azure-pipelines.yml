@@ -25,6 +25,8 @@ stages:
         tags: |
           $(tag)
 
+# now using afstuderen-docker-web-app as webRepository
+
 - stage: 'Deploy'
   displayName: 'Deploy the container'
   dependsOn: Build
