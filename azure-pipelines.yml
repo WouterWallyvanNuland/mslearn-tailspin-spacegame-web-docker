@@ -1,8 +1,8 @@
 trigger:
 - '*'
-#trigger
 
 variables:
+  buildConfiguration: 'Release'
   webRepository: 'web'
   tag: '$(Build.BuildId)'
 
@@ -25,8 +25,6 @@ stages:
         containerRegistry: 'Container Registry Connection'
         tags: |
           $(tag)
-
-# now using afstuderen-docker-web-app as webRepository
 
 - stage: 'Deploy'
   displayName: 'Deploy the container'
